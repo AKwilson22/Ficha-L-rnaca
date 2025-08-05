@@ -1,108 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1200, initial-scale=1.0" />
     <title>Registro de Excavación</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0px;
-            background-color: #f5f5f5;
-            font-size: 14px;
-        }
-        .form-container {
-            background-color: white;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-            width: 700px;
-            height: 900px;
-            margin: 0 auto;
-        }
-        h2 {
-            font-size: 1.1em;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 4px;
-            margin-top: 15px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 5px;
-            font-size: 13px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 4px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-size: 13px;
-        }
-        .checkbox-container {
-            display: flex;
-            align-items: center;
-            margin: 3px 0;
-            white-space: nowrap;
-        }
-        .checkbox-container input {
-            margin-right: 4px;
-            transform: scale(0.9);
-        }
-        .radio-container {
-            display: flex;
-            align-items: center;
-            margin: 3px 0;
-        }
-        .radio-container input {
-            margin-right: 4px;
-            transform: scale(0.9);
-        }
-        .other-container {
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
-        }
-        .other-input {
-            width: 140px;
-            margin-left: 5px;
-            border: 1px solid #ddd;
-            padding: 2px;
-            font-size: 12px;
-        }
-        .section-divider {
-            border-top: 1px dashed #999;
-            margin: 15px 0;
-        }
-        /* Estilo adicional para el botón */
-        .pdf-button {
-            padding: 10px 20px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 20px auto;
-            display: block;
-        }
-        .pdf-button:hover {
-            background: #45a049;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0px;
+        background-color: #f5f5f5;
+        font-size: 14px;
+      }
+      .form-container {
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        width: 700px;
+        height: 900px;
+        margin: 0 auto;
+      }
+      h2 {
+        font-size: 1.1em;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 4px;
+        margin-top: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 5px;
+        font-size: 13px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 4px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+        font-size: 13px;
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin: 3px 0;
+        white-space: nowrap;
+      }
+      .checkbox-container input {
+        margin-right: 4px;
+        transform: scale(0.9);
+      }
+      .radio-container {
+        display: flex;
+        align-items: center;
+        margin: 3px 0;
+      }
+      .radio-container input {
+        margin-right: 4px;
+        transform: scale(0.9);
+      }
+      .other-container {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+      }
+      .other-input {
+        width: 140px;
+        margin-left: 5px;
+        border: 1px solid #ddd;
+        padding: 2px;
+        font-size: 12px;
+      }
+      .section-divider {
+        border-top: 1px dashed #999;
+        margin: 15px 0;
+      }
+      /* Estilo adicional para el botón */
+      .pdf-button {
+        padding: 10px 20px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 20px auto;
+        display: block;
+      }
+      .pdf-button:hover {
+        background: #45a049;
+      }
     </style>
-</head>
-<body>
-            <div style="display: block;" class="form-container" id="form-to-print">
-            
-            <h2 style="display: flex; justify-content: space-between; width: 100%; height: 5.5%; padding: 0px; margin: 0px;">
-                    <span style="align-self: center;">FICHA DE REGISTRO DE EXCAVACIÓN </span>
-                <div>
-                    <h><svg viewBox="0 0 800 400" style="width: 30%; position: relative; bottom: 4%; left: 70%; ">
-                        <path d="M 710.55,0.00 L 709.99,0.56 L 709.42,0.56 L 708.86,1.13 L 708.30,1.13 L 707.74,1.69 L 707.17,1.69 L 706.61,2.25 L 706.05,2.25 L 704.92,3.38 L 704.36,3.38 
+  </head>
+  <body>
+    <div style="display: block" class="form-container" id="form-to-print">
+      <h2
+        style="
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 5.5%;
+          padding: 0px;
+          margin: 0px;
+        "
+      >
+        <span style="align-self: center">FICHA DE REGISTRO DE EXCAVACIÓN </span>
+        <div>
+          <h
+            ><svg
+              viewBox="0 0 800 400"
+              style="width: 30%; position: relative; bottom: 4%; left: 70%"
+            >
+              <path
+                d="M 710.55,0.00 L 709.99,0.56 L 709.42,0.56 L 708.86,1.13 L 708.30,1.13 L 707.74,1.69 L 707.17,1.69 L 706.61,2.25 L 706.05,2.25 L 704.92,3.38 L 704.36,3.38 
                         L 703.23,4.50 L 702.67,4.50 L 701.55,5.63 L 700.98,5.63 L 699.86,6.75 L 699.30,6.75 L 698.73,7.31 L 695.92,7.31 L 695.36,6.75 L 693.67,6.75 L 691.98,8.44 L 691.98,9.00 L 691.42,9.56 
                         L 691.42,11.25 L 689.73,12.94 L 689.17,12.94 L 689.73,12.94 L 690.30,13.50 L 689.73,14.06 L 688.61,14.06 L 688.05,13.50 L 684.11,13.50 L 683.54,14.06 L 682.98,14.06 L 682.42,14.63 
                         L 681.86,14.63 L 681.29,15.19 L 680.73,15.19 L 680.17,15.75 L 677.92,15.75 L 680.17,15.75 L 680.73,16.32 L 680.17,16.88 L 677.36,16.88 L 676.79,16.32 L 675.67,16.32 L 675.11,15.75 
@@ -312,734 +328,1341 @@
                         L 701.55,24.19 L 699.86,24.19 L 701.55,24.19 L 704.36,21.38 L 706.61,21.38 L 707.17,20.82 L 709.99,20.82 L 710.55,20.25 L 711.67,20.25 L 712.24,19.69 L 712.80,19.69 L 714.49,18.00 
                         L 714.49,17.44 L 715.05,16.88 L 715.05,16.32 L 715.61,15.75 L 715.61,9.56 L 716.17,9.00 L 716.17,8.44 L 716.74,7.88 L 716.17,7.31 L 716.17,5.06 L 716.74,4.50 L 717.30,5.06 L 717.30,6.75 
                         L 717.30,4.50 L 717.86,3.94 L 717.86,3.38 L 719.55,1.69 L 718.99,1.13 L 719.55,0.56 L 719.55,0.00 L 718.42,0.00 L 717.86,0.56 L 716.74,0.56 L 716.17,0.00 L 715.61,0.00 L 715.05,0.56 
-                        L 712.24,0.56 L 711.67,1.13 L 710.55,1.13 L 709.99,0.56 L 710.55,0.00 L 711.11,0.00 Z" fill="rgba(0, 191, 255, 0.4)"/>
-                    </svg>
-                    </h>
-                    <h style="display: inline-block; position: relative; font-size: 8px; bottom: 35%; left: 45%; transform: rotate(340deg); font-family: 'Times New Roman', Times, serif;">Lárnaca</h>
-                </div>
-        </h2>
-        <div style="height: 94%;">
-                <table style="height: 18%;">
-                    <tr>
-                        <th colspan="4">Antecedentes generales</th>
-                    </tr>
-                    <tr>
-                        <td>Sitio</td>
-                        <td><input id="Sitio" type="text" class="other-input" style="width: 80%" placeholder="Ej. HA001"></td>
-                        <td>Capa</td>
-                        <td><input id="Capa" type="text" class="other-input" style="width: 80%" placeholder="Ej. A"></td>
-                    </tr>
-                    <tr>
-                        <td>Pozo</td>
-                        <td><input id="Pozo" type="text" class="other-input" style="width: 80%" placeholder="Número de pozo"></td>
-                        <td>Nivel</td>
-                        <td><input itemid="Nivel" type="text" class="other-input" style="width: 80%" placeholder="Ej. 1 (0-10 cm)" id="Nivel"></td>
-                    </tr>
-                    <tr>
-                        <td>Responsable</td>
-                        <td><input id="Responsable" type="text" class="other-input" style="width: 80%" placeholder="Nombre del responsable"></td>
-                        <td>Fecha</td>
-                        <td><input id="Fecha" type="text" class="other-input" style="width: 80%" class="readonly-input"></td>
-                    </tr>
-                    <tr>
-                        <td>Región</td>
-                        <td><input id="Region" type="text" class="other-input" style="width: 80%"value="Región del Biobío"></td>
-                        <td>Provincia</td>
-                        <td><input id="Provincia" type="text" class="other-input" style="width: 80%" value="Biobío"></td>
-                    </tr>
-                    <tr>
-                        <td>Comuna</td>
-                        <td colspan="3"><input id="Comuna" type="text" class="other-input" style="width: 92%" value="Mulchén"></td>
-                    </tr>
-                </table>
-            <!-- Sección Descripción del sedimento -->
-            <table style="height: 15%;">
-                <tr>
-                    <th colspan="6">Descripción del sedimento</th>
-                </tr>
-                <tr>
-                    <th colspan="3">Textura</th>
-                    <th colspan="3">Color de la matriz</th>
-                </tr>
-                <tr>
-                    <td class="textura-column">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="arena" name="textura" value="Arena">
-                            <label for="arena">Arena</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="arcilla" name="textura" value="Arcilla">
-                            <label for="arcilla">Arcilla</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="limo" name="textura" value="Limo">
-                            <label for="limo">Limo</label>
-                        </div>
-                    </td>
-                    <td class="textura-column">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="limo-arenoso" name="textura" value="Limo arenoso">
-                            <label for="limo-arenoso">Limo arenoso</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="limo-arcilloso" name="textura" value="Limo arcilloso">
-                            <label for="limo-arcilloso">Limo arcilloso</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="areno-limoso" name="textura" value="Areno limoso">
-                            <label for="areno-limoso">Areno limoso</label>
-                        </div>
-                    </td>
-                    <td class="textura-column">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="areno-arcilloso" name="textura" value="Areno arcilloso">
-                            <label for="areno-arcilloso">Areno arcilloso</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="arcillo-arenoso" name="textura" value="Arcillo arenoso">
-                            <label for="arcillo-arenoso">Arcillo arenoso</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="arcillo-limoso" name="textura" value="Arcillo limoso">
-                            <label for="arcillo-limoso">Arcillo limoso</label>
-                        </div>
-                    </td>
-                    <td class="color-column">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="pardo-claro" name="color" value="Pardo claro">
-                            <label for="pardo-claro">Pardo claro</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="pardo-medio" name="color" value="Pardo medio">
-                            <label for="pardo-medio">Pardo medio</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="pardo-oscuro" name="color" value="Pardo oscuro">
-                            <label for="pardo-oscuro">Pardo oscuro</label>
-                        </div>
-                    </td>
-                    <td class="color-column">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="amarillento" name="color" value="Amarillento">
-                            <label for="amarillento">Amarillento</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="grisaceo" name="color" value="Grisáceo">
-                            <label for="grisaceo">Grisáceo</label>
-                        </div>
-                        <div class="other-container">
-                            <input type="checkbox" id="otro-color" name="color" value="Otro">
-                            <label for="otro-color">Otro:</label>
-                            <input type="text" id="input-otro-color" class="other-input" placeholder="Especificar">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <!-- Nueva sección Consistencia -->
-            <table style="height: 15%;">
-                <tr>
-                    <th>Consistencia</th>
-                    <th>Granulometría</th>
-                    <th>Contenido orgánico</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="friable" name="consistencia" value="Friable">
-                            <label for="friable">Friable</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="semicompacta" name="consistencia" value="Semicompacta">
-                            <label for="semicompacta">Semicompacta</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="compacta" name="consistencia" value="Compacta">
-                            <label for="compacta">Compacta</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="muy-compacta" name="consistencia" value="Muy compacta">
-                            <label for="muy-compacta">Muy compacta</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="fina" name="granulometria" value="Fina">
-                            <label for="fina">Fina</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="media" name="granulometria" value="Media">
-                            <label for="media">Media</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="gruesa" name="granulometria" value="Gruesa">
-                            <label for="gruesa">Gruesa</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="nulo" name="organico" value="Nulo">
-                            <label for="nulo">Nulo</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="bajo" name="organico" value="Bajo">
-                            <label for="bajo">Bajo</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="medio" name="organico" value="Medio">
-                            <label for="medio">Medio</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="alto" name="organico" value="Alto">
-                            <label for="alto">Alto</label>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <table style="height: 9%;">
-                <tr>
-                    <th colspan="4">Tipo de inclusiones</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="grava" name="inclusiones" value="Grava">
-                            <label for="grava">Grava</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="gravilla" name="inclusiones" value="Gravilla">
-                            <label for="gravilla">Gravilla</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="clastos-angulares" name="inclusiones" value="Clastos angulares">
-                            <label for="clastos-angulares">Clastos angulares</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="clastos-redondeados" name="inclusiones" value="Clastos redondeados">
-                            <label for="clastos-redondeados">Clastos redondeados</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="maicillo" name="inclusiones" value="Máicillo">
-                            <label for="maicillo">Máicillo</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="no-presenta" name="inclusiones" value="No presenta">
-                            <label for="no-presenta">No presenta</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="materiales-construccion" name="inclusiones" value="Materiales de construcción">
-                            <label for="materiales-construccion">Materiales de construcción</label>
-                        </div>
-                        <div class="other-container">
-                            <input type="checkbox" id="otro-inclusion" name="inclusiones" value="Otro">
-                            <label for="otro-inclusion">Otro:</label>
-                            <input type="text" class="other-input" placeholder="Especificar">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <!-- Sección Tamaño de inclusiones -->
-            <table style="height: 9%;">
-                <tr>
-                    <th colspan="2">Tamaño de inclusiones</th>
-                    <th colspan="2">Densidad de inclusiones</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="muy-pequeno" name="tamano" value="Muy pequeño">
-                            <label for="muy-pequeno">Muy pequeño</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="pequeno" name="tamano" value="Pequeño">
-                            <label for="pequeno">Pequeño</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="mediano" name="tamano" value="Mediano">
-                            <label for="mediano">Mediano</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="grande" name="tamano" value="Grande">
-                            <label for="grande">Grande</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="muy-baja" name="densidad" value="Muy baja">
-                            <label for="muy-baja">Muy baja</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="baja" name="densidad" value="Baja">
-                            <label for="baja">Baja</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="media" name="densidad" value="Media">
-                            <label for="media">Media</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="alta" name="densidad" value="Alta">
-                            <label for="alta">Alta</label>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <!-- Sección Material cultural -->
-            <table style="height: 9%;">
-                <tr>
-                    <th colspan="4">Material cultural</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="ceramica" name="material" value="Cerámica">
-                            <input type="text" class="other-input" style="width: 15px;">
-                            <label for="ceramica">Cerámica</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="metal" name="material" value="Metal">
-                            <input type="text" class="other-input" style="width: 15px;">
-                            <label for="metal">Metal</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="loza" name="material" value="Loza">
-                            <input type="text" class="other-input" style="width: 15px;">
-                            <label for="loza">Loza</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="vidrio" name="material" value="Vidrio">
-                            <input type="text" class="other-input" style="width: 15px;">
-                            <label for="vidrio">Vidrio</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="litico" name="material" value="Lítico">
-                            <input type="text" class="other-input" style="width: 15px;">
-                            <label for="litico">Lítico</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="malacologico" name="material" value="Malacológico">
-                            <input type="text" class="other-input" style="width: 15px;">
-                            <label for="malacologico">Malacológico</label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="osteofauna" name="material" value="Osteofauna">
-                            <input type="text" class="other-input" style="width: 15px;">
-                            <label for="osteofauna">Osteofauna</label>
-                        </div>
-                        <div class="other-container">
-                            <input type="checkbox" id="otro-material" name="material" value="Otro">
-                            <input type="text" class="other-input" style="width: 15px;">
-                            <label for="otro-material" style="margin-left: 5px;">Otro:</label>
-                            <input type="text" class="other-input" placeholder="Especificar">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <table style="height: 15%;">
-                <tr>
-                    <th colspan="4">Observaciones generales</th>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <textarea id="obs" style="width: 100%; height: 80px; border: none; resize: none; font-family: Arial, sans-serif; font-size: 13px;" 
-                                placeholder="Sin observaciones."></textarea>
-                                
-                    </td>
-                </tr>
-            </table>
+                        L 712.24,0.56 L 711.67,1.13 L 710.55,1.13 L 709.99,0.56 L 710.55,0.00 L 711.11,0.00 Z"
+                fill="rgba(0, 191, 255, 0.4)"
+              />
+            </svg>
+          </h>
+          <h
+            style="
+              display: inline-block;
+              position: relative;
+              font-size: 8px;
+              bottom: 35%;
+              left: 45%;
+              transform: rotate(340deg);
+              font-family: 'Times New Roman', Times, serif;
+            "
+            >Lárnaca</h
+          >
         </div>
+      </h2>
+      <div style="height: 94%">
+        <table style="height: 18%">
+          <tr>
+            <th colspan="4">Antecedentes generales</th>
+          </tr>
+          <tr>
+            <td>Sitio</td>
+            <td>
+              <input
+                id="Sitio"
+                type="text"
+                class="other-input"
+                style="width: 80%"
+                placeholder="Ej. HA001"
+              />
+            </td>
+            <td>Capa</td>
+            <td>
+              <input
+                id="Capa"
+                type="text"
+                class="other-input"
+                style="width: 80%"
+                placeholder="Ej. A"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Unidad</td>
+            <td>
+              <input
+                id="Unidad"
+                type="text"
+                class="other-input"
+                style="width: 80%"
+                placeholder="Número de unidad"
+              />
+            </td>
+            <td>Nivel</td>
+            <td>
+              <input
+                itemid="Nivel"
+                type="text"
+                class="other-input"
+                style="width: 80%"
+                placeholder="Ej. 1 (0-10 cm)"
+                id="Nivel"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Responsable</td>
+            <td>
+              <input
+                id="Responsable"
+                type="text"
+                class="other-input"
+                style="width: 80%"
+                placeholder="Nombre del responsable"
+              />
+            </td>
+            <td>Fecha</td>
+            <td>
+              <input
+                id="Fecha"
+                type="text"
+                class="other-input"
+                style="width: 80%"
+                class="readonly-input"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Región</td>
+            <td>
+              <input
+                id="Region"
+                type="text"
+                class="other-input"
+                style="width: 80%"
+                value="Región del Biobío"
+              />
+            </td>
+            <td>Provincia</td>
+            <td>
+              <input
+                id="Provincia"
+                type="text"
+                class="other-input"
+                style="width: 80%"
+                value="Biobío"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Comuna</td>
+            <td colspan="3">
+              <input
+                id="Comuna"
+                type="text"
+                class="other-input"
+                style="width: 92%"
+                value="Mulchén"
+              />
+            </td>
+          </tr>
+        </table>
+        <!-- Sección Descripción del sedimento -->
+        <table style="height: 15%">
+          <tr>
+            <th colspan="6">Descripción del sedimento</th>
+          </tr>
+          <tr>
+            <th colspan="3">Textura</th>
+            <th colspan="3">Color de la matriz</th>
+          </tr>
+          <tr>
+            <td class="textura-column">
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="arena"
+                  name="textura"
+                  value="Arena"
+                />
+                <label for="arena">Arena</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="arcilla"
+                  name="textura"
+                  value="Arcilla"
+                />
+                <label for="arcilla">Arcilla</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="limo" name="textura" value="Limo" />
+                <label for="limo">Limo</label>
+              </div>
+            </td>
+            <td class="textura-column">
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="limo-arenoso"
+                  name="textura"
+                  value="Limo arenoso"
+                />
+                <label for="limo-arenoso">Limo arenoso</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="limo-arcilloso"
+                  name="textura"
+                  value="Limo arcilloso"
+                />
+                <label for="limo-arcilloso">Limo arcilloso</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="areno-limoso"
+                  name="textura"
+                  value="Areno limoso"
+                />
+                <label for="areno-limoso">Areno limoso</label>
+              </div>
+            </td>
+            <td class="textura-column">
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="areno-arcilloso"
+                  name="textura"
+                  value="Areno arcilloso"
+                />
+                <label for="areno-arcilloso">Areno arcilloso</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="arcillo-arenoso"
+                  name="textura"
+                  value="Arcillo arenoso"
+                />
+                <label for="arcillo-arenoso">Arcillo arenoso</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="arcillo-limoso"
+                  name="textura"
+                  value="Arcillo limoso"
+                />
+                <label for="arcillo-limoso">Arcillo limoso</label>
+              </div>
+            </td>
+            <td class="color-column">
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="pardo-claro"
+                  name="color"
+                  value="Pardo claro"
+                />
+                <label for="pardo-claro">Pardo claro</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="pardo-medio"
+                  name="color"
+                  value="Pardo medio"
+                />
+                <label for="pardo-medio">Pardo medio</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="pardo-oscuro"
+                  name="color"
+                  value="Pardo oscuro"
+                />
+                <label for="pardo-oscuro">Pardo oscuro</label>
+              </div>
+            </td>
+            <td class="color-column">
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="amarillento"
+                  name="color"
+                  value="Amarillento"
+                />
+                <label for="amarillento">Amarillento</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="grisaceo"
+                  name="color"
+                  value="Grisáceo"
+                />
+                <label for="grisaceo">Grisáceo</label>
+              </div>
+              <div class="other-container">
+                <input
+                  type="checkbox"
+                  id="otro-color"
+                  name="color"
+                  value="Otro"
+                />
+                <label for="otro-color">Otro:</label>
+                <input
+                  type="text"
+                  id="input-otro-color"
+                  class="other-input"
+                  placeholder="Especificar"
+                />
+              </div>
+            </td>
+          </tr>
+        </table>
+        <!-- Nueva sección Consistencia -->
+        <table style="height: 15%">
+          <tr>
+            <th>Consistencia</th>
+            <th>Granulometría</th>
+            <th>Contenido orgánico</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="friable"
+                  name="consistencia"
+                  value="Friable"
+                />
+                <label for="friable">Friable</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="semicompacta"
+                  name="consistencia"
+                  value="Semicompacta"
+                />
+                <label for="semicompacta">Semicompacta</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="compacta"
+                  name="consistencia"
+                  value="Compacta"
+                />
+                <label for="compacta">Compacta</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="muy-compacta"
+                  name="consistencia"
+                  value="Muy compacta"
+                />
+                <label for="muy-compacta">Muy compacta</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="fina"
+                  name="granulometria"
+                  value="Fina"
+                />
+                <label for="fina">Fina</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="media"
+                  name="granulometria"
+                  value="Media"
+                />
+                <label for="media">Media</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="gruesa"
+                  name="granulometria"
+                  value="Gruesa"
+                />
+                <label for="gruesa">Gruesa</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="nulo" name="organico" value="Nulo" />
+                <label for="nulo">Nulo</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="bajo" name="organico" value="Bajo" />
+                <label for="bajo">Bajo</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="medio"
+                  name="organico"
+                  value="Medio"
+                />
+                <label for="medio">Medio</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="alto" name="organico" value="Alto" />
+                <label for="alto">Alto</label>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <table style="height: 9%">
+          <tr>
+            <th colspan="4">Tipo de inclusiones</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="grava"
+                  name="inclusiones"
+                  value="Grava"
+                />
+                <label for="grava">Grava</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="gravilla"
+                  name="inclusiones"
+                  value="Gravilla"
+                />
+                <label for="gravilla">Gravilla</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="clastos-angulares"
+                  name="inclusiones"
+                  value="Clastos angulares"
+                />
+                <label for="clastos-angulares">Clastos angulares</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="clastos-redondeados"
+                  name="inclusiones"
+                  value="Clastos redondeados"
+                />
+                <label for="clastos-redondeados">Clastos redondeados</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="maicillo"
+                  name="inclusiones"
+                  value="Máicillo"
+                />
+                <label for="maicillo">Máicillo</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="no-presenta"
+                  name="inclusiones"
+                  value="No presenta"
+                />
+                <label for="no-presenta">No presenta</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="materiales-construccion"
+                  name="inclusiones"
+                  value="Materiales de construcción"
+                />
+                <label for="materiales-construccion"
+                  >Materiales de construcción</label
+                >
+              </div>
+              <div class="other-container">
+                <input
+                  type="checkbox"
+                  id="otro-inclusion"
+                  name="inclusiones"
+                  value="Otro"
+                />
+                <label for="otro-inclusion">Otro:</label>
+                <input
+                  id="inclusion-otro"
+                  type="text"
+                  class="other-input"
+                  placeholder="Especificar"
+                />
+              </div>
+            </td>
+          </tr>
+        </table>
+        <!-- Sección Tamaño de inclusiones -->
+        <table style="height: 9%">
+          <tr>
+            <th colspan="2">Tamaño de inclusiones</th>
+            <th colspan="2">Densidad de inclusiones</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="muy-pequeno"
+                  name="tamano"
+                  value="Muy pequeño"
+                />
+                <label for="muy-pequeno">Muy pequeño</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="pequeno"
+                  name="tamano"
+                  value="Pequeño"
+                />
+                <label for="pequeno">Pequeño</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="mediano"
+                  name="tamano"
+                  value="Mediano"
+                />
+                <label for="mediano">Mediano</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="grande"
+                  name="tamano"
+                  value="Grande"
+                />
+                <label for="grande">Grande</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="muy-baja"
+                  name="densidad"
+                  value="Muy baja"
+                />
+                <label for="muy-baja">Muy baja</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="densidad-baja"
+                  name="densidad"
+                  value="Baja"
+                />
+                <label for="densidad-baja">Baja</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="densidad-media"
+                  name="densidad"
+                  value="Media"
+                />
+                <label for="densidad-media">Media</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="densidad-alta"
+                  name="densidad"
+                  value="Alta"
+                />
+                <label for="densidad-alta">Alta</label>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <!-- Sección Material cultural -->
+        <table style="height: 9%">
+          <tr>
+            <th colspan="4">Material cultural</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="ceramica"
+                  name="material"
+                  value="Cerámica"
+                />
+                <input
+                  type="text"
+                  id="n-c"
+                  class="other-input"
+                  style="width: 15px"
+                />
+                <label for="ceramica">Cerámica</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="metal"
+                  name="material"
+                  value="Metal"
+                />
+                <input
+                  type="text"
+                  id="n-me"
+                  class="other-input"
+                  style="width: 15px"
+                />
+                <label for="metal">Metal</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="loza" name="material" value="Loza" />
+                <input
+                  type="text"
+                  id="n-lo"
+                  class="other-input"
+                  style="width: 15px"
+                />
+                <label for="loza">Loza</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="vidrio"
+                  name="material"
+                  value="Vidrio"
+                />
+                <input
+                  type="text"
+                  id="n-v"
+                  class="other-input"
+                  style="width: 15px"
+                />
+                <label for="vidrio">Vidrio</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="litico"
+                  name="material"
+                  value="Lítico"
+                />
+                <input
+                  type="text"
+                  id="n-li"
+                  class="other-input"
+                  style="width: 15px"
+                />
+                <label for="litico">Lítico</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="malacologico"
+                  name="material"
+                  value="Malacológico"
+                />
+                <input
+                  type="text"
+                  id="n-ma"
+                  class="other-input"
+                  style="width: 15px"
+                />
+                <label for="malacologico">Malacológico</label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="osteofauna"
+                  name="material"
+                  value="Osteofauna"
+                />
+                <input
+                  type="text"
+                  id="n-os"
+                  class="other-input"
+                  style="width: 15px"
+                />
+                <label for="osteofauna">Osteofauna</label>
+              </div>
+              <div class="other-container">
+                <input
+                  type="checkbox"
+                  id="otro-material"
+                  name="material"
+                  value="Otro"
+                />
+                <input
+                  type="text"
+                  id="n-ot"
+                  class="other-input"
+                  style="width: 15px"
+                />
+                <label for="otro-material" style="margin-left: 5px"
+                  >Otro:</label
+                >
+                <input
+                  id="otro-mat"
+                  type="text"
+                  class="other-input"
+                  placeholder="Especificar"
+                />
+              </div>
+            </td>
+          </tr>
+        </table>
+        <table style="height: 15%">
+          <tr>
+            <th colspan="4">Observaciones generales</th>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <textarea
+                id="obs"
+                style="
+                  width: 100%;
+                  height: 80px;
+                  border: none;
+                  resize: none;
+                  font-family: Arial, sans-serif;
+                  font-size: 13px;
+                "
+                placeholder="Sin observaciones."
+              ></textarea>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <!-- Seccion de Fotos -->
-    <div style="display: none;" id="Fotos">
+    <div style="display: none" id="Fotos">
+      <div
+        style="display: block; margin-top: 2rem"
+        class="form-container"
+        id="Foto-cierre-nivel"
+      >
+        <div style="height: 50%">
+          <h
+            style="
+              display: flex;
+              justify-content: center;
+              max-width: 100%;
+              max-height: 100%;
+            "
+          >
+            <img
+              id="imgcierre"
+              style="
+                align-content: center;
+                padding-top: 1rem;
+                max-width: 80%;
+                max-height: 100%;
+                display: none;
+                object-fit: contain;
+              "
+            />
+          </h>
+        </div>
+        <h2
+          style="
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 6%;
+            padding: 0px;
+            margin: 0px;
+          "
+        >
+          <span style="align-self: center" id="cierreNivelTexto"
+            >Cierre de nivel</span
+          >
+        </h2>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <button
+          style="
+            display: inline;
+            margin-right: 2rem;
+            background-color: rgba(0, 0, 255, 0.877);
+          "
+          class="pdf-button"
+          id="BotonC"
+          onclick="document.getElementById('fileInputcierre').click()"
+        >
+          Foto Cierre de Nivel
+        </button>
+        <button
+          style="
+            display: inline;
+            margin-left: 2rem;
+            background-color: rgba(255, 227, 134, 0.904);
+            color: #000000;
+          "
+          class="pdf-button"
+          id="BotonPerfiles"
+          onclick="activarperfiles()"
+        >
+          Agregar Fotos de Perfil
+        </button>
+      </div>
+      <div
+        style="display: none; margin-top: 2rem"
+        class="form-container"
+        id="Foto-perfil-1"
+      >
+        <div style="height: 50%">
+          <div style="height: 80%">
+            <h
+              style="
+                display: flex;
+                justify-content: center;
+                max-width: 100%;
+                max-height: 100%;
+              "
+            >
+              <img
+                id="imgPN"
+                style="
+                  padding-top: 1rem;
+                  align-content: center;
+                  max-width: 80%;
+                  max-height: 100%;
+                  display: none;
+                  object-fit: contain;
+                "
+              />
+            </h>
+          </div>
+          <h2
+            style="
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              height: 6%;
+              padding: 0px;
+              margin: 0px;
+            "
+          >
+            <span style="align-self: center">Foto de perfil Norte</span>
+          </h2>
+        </div>
+        <div style="height: 50%">
+          <div style="height: 80%">
+            <h
+              style="
+                display: flex;
+                justify-content: center;
+                max-width: 100%;
+                max-height: 100%;
+              "
+            >
+              <img
+                id="imgPE"
+                style="
+                  padding-top: 1rem;
+                  align-content: center;
+                  max-width: 80%;
+                  max-height: 100%;
+                  display: none;
+                  object-fit: contain;
+                "
+              />
+            </h>
+          </div>
+          <h2
+            style="
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              height: 6%;
+              padding: 0px;
+              margin: 0px;
+            "
+          >
+            <span style="align-self: center">Foto de perfil Este</span>
+          </h2>
+        </div>
+      </div>
+      <button
+        class="pdf-button"
+        id="BotonN"
+        style="display: none; background-color: rgba(0, 0, 255, 0.877)"
+        onclick="document.getElementById('fileInputperfilN').click()"
+      >
+        Foto perfil Norte
+      </button>
+      <button
+        class="pdf-button"
+        id="BotonE"
+        style="display: none; background-color: rgba(0, 0, 255, 0.877)"
+        onclick="document.getElementById('fileInputperfilE').click()"
+      >
+        Foto perfil Este
+      </button>
 
-    <div style="display: block; margin-top: 2rem;" class="form-container" id="Foto-cierre-nivel" >  
-        <div style="height: 50%;">          
-            <h style="display: flex; justify-content: center; max-width: 100%; max-height: 100%;"> <img id="imgcierre" style="align-content: center; padding-top: 1rem; max-width: 80%; max-height: 100%; display:none; object-fit:contain;"> </h>
-            </div>
-            <h2 style="display: flex; justify-content: center; width: 100%; height: 6%; padding: 0px; margin: 0px;">
-            <span style="align-self: center;" id="cierreNivelTexto">Cierre de nivel</span></h2>
+      <div
+        style="display: none; margin-top: 2rem"
+        class="form-container"
+        id="Foto-perfil-2"
+      >
+        <div style="height: 50%">
+          <div style="height: 80%">
+            <h
+              style="
+                display: flex;
+                justify-content: center;
+                max-width: 100%;
+                max-height: 100%;
+              "
+            >
+              <img
+                id="imgPS"
+                style="
+                  padding-top: 1rem;
+                  align-content: center;
+                  max-width: 80%;
+                  max-height: 100%;
+                  display: none;
+                  object-fit: contain;
+                "
+              />
+            </h>
+          </div>
+          <h2
+            style="
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              height: 6%;
+              padding: 0px;
+              margin: 0px;
+            "
+          >
+            <span style="align-self: center">Foto de perfil Sur</span>
+          </h2>
         </div>
-        <div style="display: flex; justify-content: center;">
-            <button style="display: inline; margin-right: 2rem; background-color: rgba(0, 0, 255, 0.877);" class="pdf-button" id="BotonC" onclick="document.getElementById('fileInputcierre').click()">Foto Cierre de Nivel</button>
-            <button style="display: inline; margin-left: 2rem; background-color: rgba(255, 227, 134, 0.904); color: #000000;" class="pdf-button" id="BotonPerfiles" onclick="activarperfiles()">Agregar Fotos de Perfil</button>
+        <div style="height: 50%">
+          <div style="height: 80%">
+            <h
+              style="
+                display: flex;
+                justify-content: center;
+                max-width: 100%;
+                max-height: 100%;
+              "
+            >
+              <img
+                id="imgPO"
+                style="
+                  padding-top: 1rem;
+                  align-content: center;
+                  max-width: 80%;
+                  max-height: 100%;
+                  display: none;
+                  object-fit: contain;
+                "
+              />
+            </h>
+          </div>
+          <h2
+            style="
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              height: 6%;
+              padding: 0px;
+              margin: 0px;
+            "
+          >
+            <span style="align-self: center">Foto de perfil Oeste</span>
+          </h2>
         </div>
-    <div style="display: none; margin-top: 2rem;" class="form-container" id="Foto-perfil-1" >
-        <div style="height: 50%;">
-            <div style="height: 80%;">
-            <h style="display: flex; justify-content: center; max-width: 100%; max-height: 100%;"> <img id="imgPN" style="padding-top: 1rem; align-content: center; max-width: 80%; max-height: 100%; display:none; object-fit:contain;"> </h>
-            </div>
-            <h2 style="display: flex; justify-content: center; width: 100%; height: 6%; padding: 0px; margin: 0px;">
-                <span style="align-self: center;">Foto de perfil Norte</span>
-            </h2>
-        </div>
-        <div style="height: 50%;">
-            <div style="height: 80%;">
-            <h style="display: flex; justify-content: center; max-width: 100%; max-height: 100%;"> <img id="imgPE" style="padding-top: 1rem; align-content: center; max-width: 80%; max-height: 100%; display:none; object-fit:contain;"> </h>
-            </div>
-            <h2 style="display: flex; justify-content: center; width: 100%; height: 6%; padding: 0px; margin: 0px;">
-                <span style="align-self: center;">Foto de perfil Este</span>
-            </h2>
-        </div>
-            
-    </div>
-            <button class="pdf-button" id="BotonN" style="display: none; background-color:rgba(0, 0, 255, 0.877);" onclick="document.getElementById('fileInputperfilN').click()">Foto perfil Norte</button>
-            <button class="pdf-button" id="BotonE" style="display: none; background-color: rgba(0, 0, 255, 0.877);" onclick="document.getElementById('fileInputperfilE').click()">Foto perfil Este</button>
+      </div>
+      <button
+        class="pdf-button"
+        id="BotonS"
+        style="display: none; background-color: rgba(0, 0, 255, 0.877)"
+        onclick="document.getElementById('fileInputperfilS').click()"
+      >
+        Foto perfil Sur
+      </button>
+      <button
+        class="pdf-button"
+        id="BotonO"
+        style="display: none; background-color: rgba(0, 0, 255, 0.877)"
+        onclick="document.getElementById('fileInputperfilO').click()"
+      >
+        Foto perfil Oeste
+      </button>
+      <!-- Inputs -->
+      <input
+        type="file"
+        id="fileInputcierre"
+        accept="image/*"
+        style="display: none"
+        onchange="mostrarImagenC(this)"
+      />
 
-    <div style="display: none; margin-top: 2rem;" class="form-container" id="Foto-perfil-2" >
-        <div style="height: 50%;">
-            <div style="height: 80%;">
-                <h style="display: flex; justify-content: center; max-width: 100%; max-height: 100%;"> <img id="imgPS" style="padding-top: 1rem; align-content: center; max-width: 80%; max-height: 100%; display:none; object-fit:contain;"> </h>
-            </div>
-            <h2 style="display: flex; justify-content: center; width: 100%; height: 6%; padding: 0px; margin: 0px;">
-                <span style="align-self: center;">Foto de perfil Sur</span>
-            </h2>
-        </div>
-        <div style="height: 50%;">    
-            <div style="height: 80%;">        
-                <h style="display: flex; justify-content: center; max-width: 100%; max-height: 100%;"> <img id="imgPO" style="padding-top: 1rem; align-content: center; max-width: 80%; max-height: 100%; display:none; object-fit:contain;"> </h>
-            </div>
-            <h2 style="display: flex; justify-content: center; ; width: 100%; height: 6%; padding: 0px; margin: 0px;">
-                <span style="align-self: center;">Foto de perfil Oeste</span>
-            </h2>
-        </div>
-    </div>
-            <button class="pdf-button" id="BotonS" style="display: none; background-color: rgba(0, 0, 255, 0.877);" onclick="document.getElementById('fileInputperfilS').click()">Foto perfil Sur</button>
-            <button class="pdf-button" id="BotonO" style="display: none; background-color: rgba(0, 0, 255, 0.877);" onclick="document.getElementById('fileInputperfilO').click()">Foto perfil Oeste</button>
+      <input
+        type="file"
+        id="fileInputperfilN"
+        accept="image/*"
+        style="display: none"
+        onchange="mostrarImagenN(this)"
+      />
 
-    
-        <!-- Inputs -->
-    <input type="file" id="fileInputcierre" accept="image/*" style="display:none;" onchange="mostrarImagenC(this)">
-    
-    <input type="file" id="fileInputperfilN" accept="image/*" style="display:none;" onchange="mostrarImagenN(this)">
-    
-    <input type="file" id="fileInputperfilE" accept="image/*" style="display:none;" onchange="mostrarImagenE(this)">
-    
-    <input type="file" id="fileInputperfilS" accept="image/*" style="display:none;" onchange="mostrarImagenS(this)">
+      <input
+        type="file"
+        id="fileInputperfilE"
+        accept="image/*"
+        style="display: none"
+        onchange="mostrarImagenE(this)"
+      />
 
-    <input type="file" id="fileInputperfilO" accept="image/*" style="display:none;" onchange="mostrarImagenO(this)">
+      <input
+        type="file"
+        id="fileInputperfilS"
+        accept="image/*"
+        style="display: none"
+        onchange="mostrarImagenS(this)"
+      />
 
+      <input
+        type="file"
+        id="fileInputperfilO"
+        accept="image/*"
+        style="display: none"
+        onchange="mostrarImagenO(this)"
+      />
     </div>
     <!-- Vista previa -->
-  
-    <button id="botonfotos" class="pdf-button" style="background-color: rgba(255, 227, 134, 0.904); color: #000000;"  onclick="agregarfotos()">Agregar Fotos</button>
+
+    <button
+      id="botonfotos"
+      class="pdf-button"
+      style="background-color: rgba(255, 227, 134, 0.904); color: #000000"
+      onclick="agregarfotos()"
+    >
+      Agregar Fotos
+    </button>
     <button class="pdf-button" onclick="imprimirSinBoton()">Generar PDF</button>
-    <button id="ocultarP" class="pdf-button" style="background-color: rgba(230, 56, 56, 0.808); display: none;" onclick="ocultarperfiles()">Ocultar Perfiles</button>
-    <button id="ocultarF" class="pdf-button" style="background-color: rgba(230, 56, 56, 0.808); display: none;" onclick="ocultarcierre()">Ocultar Foto de Cierre</button>
-
+    <button
+      id="ocultarP"
+      class="pdf-button"
+      style="background-color: rgba(230, 56, 56, 0.808); display: none"
+      onclick="ocultarperfiles()"
+    >
+      Ocultar Perfiles
+    </button>
+    <button
+      id="ocultarF"
+      class="pdf-button"
+      style="background-color: rgba(230, 56, 56, 0.808); display: none"
+      onclick="ocultarcierre()"
+    >
+      Ocultar Foto de Cierre
+    </button>
+    <button
+      class="pdf-button"
+      style="background-color: rgba(0, 0, 255, 0.877)"
+      onclick="limpiarCampos()"
+    >
+      🔃
+    </button>
     <script>
-                
+      const inputs = document.querySelectorAll("input");
+      // Configurar fecha automáticamente
 
+      function staticData() {
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, "0");
+        const month = String(today.getMonth() + 1).padStart(2, "0");
+        const year = today.getFullYear();
+        document.getElementById("Fecha").value = `${day}-${month}-${year}`;
+        document.getElementById("Region").value = "Región del Biobío";
+        document.getElementById("Comuna").value = "Mulchén";
+        document.getElementById("Provincia").value = "Biobío";
+      }
 
-
-                // Configurar fecha automáticamente 
-        document.addEventListener('DOMContentLoaded', function() {
-            const today = new Date();
-            const day = String(today.getDate()).padStart(2, '0');
-            const month = String(today.getMonth() + 1).padStart(2, '0');
-            const year = today.getFullYear();
-            document.getElementById('Fecha').value = `${day}-${month}-${year}`;
+      document.addEventListener("DOMContentLoaded", function () {
+        inputs.forEach((input) => {
+          if (localStorage[input.id]) {
+            if (input.type === "text") {
+              input.value = localStorage[input.id];
+            } else if (input.type === "checkbox") {
+              input.checked = localStorage[input.id];
+            }
+          }
         });
-        //imputs
-        const inputIds = [
-        "sitio", "capa", "pozo", "nivel", "responsable", "input-otro-color", "obs"
-        ];
+        staticData();
+      });
 
-
-        const checkboxIds = [
-        "arena", "arcilla", "limo", "limo-arenoso", "limo-arcilloso", "areno-limoso", 
-        "areno-arcilloso", "arcillo-arenoso", "arcillo-limoso", "pardo-claro", 
-        "pardo-medio", "pardo-oscuro", "amarillento", "grisaceo", "otro-color", 
-        "friable", "semicompacta", "compacta", "muy-compacta", "fina", "media", 
-        "gruesa", "nulo", "bajo", "medio", "alto", "grava", "gravilla", 
-        "clastos-angulares", "clastos-redondeados", "maicillo", "no-presenta", 
-        "material-construccion", "muy-pequeno", "pequeno", "mediano", "grande", 
-        "muy-baja", "baja", "media", "alta", "ceramica", "metal", "loza", 
-        "vidrio", "litico", "malacologico", "osteofauna", "otro-material"
-        ];
-        checkboxIds.forEach(id => {
-        const checkbox = document.getElementById(id);
-        if (checkbox) {
-            // Cargar estado guardado al iniciar
-            checkbox.checked = localStorage.getItem(id) === "true";
-
-            // Escuchar cambios para guardar
-            checkbox.addEventListener("change", () => {
-            localStorage.setItem(id, checkbox.checked);
-            console.log(`Checkbox ${id} = ${checkbox.checked}`); // Opcional para debug
-            });
+      inputs.forEach((input) => {
+        if (input.type === "text") {
+          input.addEventListener("change", () => {
+            localStorage[input.id] = input.value;
+          });
+        } else if (input.type === "checkbox") {
+          input.addEventListener("change", () => {
+            localStorage[input.id] = input.checked;
+          });
         }
-        });
-      
-        
+      });
 
-                
+      // agregar seccion de fotos
+      function agregarfotos() {
+        // Cambiar a display: block
+        document.getElementById("Fotos").style.display = "block";
+        document.getElementById("botonfotos").style.display = "none";
+        document.getElementById("ocultarF").style.display = "block";
+      }
+      function ocultarcierre() {
+        document.getElementById("Fotos").style.display = "none";
+        document.getElementById("botonfotos").style.display = "block";
+        document.getElementById("ocultarF").style.display = "none";
+      }
 
-
-
-
-
-
-
-
-        // agregar seccion de fotos
-        function agregarfotos() {
-        // Cambiar a display: block 
-        document.getElementById('Fotos').style.display = 'block'; 
-        document.getElementById('botonfotos').style.display = 'none';
-        document.getElementById('ocultarF').style.display = 'block'; 
-        }
-        function ocultarcierre() {
-        document.getElementById('Fotos').style.display = 'none'; 
-        document.getElementById('botonfotos').style.display = 'block';
-        document.getElementById('ocultarF').style.display = 'none'; 
-        }
-
-        // agregar Fotos de perfil
-                function activarperfiles() {
+      // agregar Fotos de perfil
+      function activarperfiles() {
         // Cambiar a display: block (Foto-perfil-1 y Foto-perfil-2)
-        document.getElementById('Foto-perfil-1').style.display = 'block';
-        document.getElementById('Foto-perfil-2').style.display = 'block';     
-        document.getElementById('ocultarF').style.display = 'none'; 
+        document.getElementById("Foto-perfil-1").style.display = "block";
+        document.getElementById("Foto-perfil-2").style.display = "block";
+        document.getElementById("ocultarF").style.display = "none";
 
         // Cambiar a display: inline-block (Botones N, E, S, O)
-        const botones = ['BotonN', 'BotonE', 'BotonS', 'BotonO' ,'ocultarP'];
-        botones.forEach(id => {
-            document.getElementById(id).style.display = 'block';
+        const botones = ["BotonN", "BotonE", "BotonS", "BotonO", "ocultarP"];
+        botones.forEach((id) => {
+          document.getElementById(id).style.display = "block";
         });
         // Ocultar boton (activar perfiles)
-        document.getElementById('BotonPerfiles').style.display = 'none';
-        document.getElementById('BotonC').style.margin = 'auto';
-        document.getElementById('BotonC').style.marginTop = '1.5rem';
-        }
-        //Activar boton (ocultar perfiles)
+        document.getElementById("BotonPerfiles").style.display = "none";
+        document.getElementById("BotonC").style.margin = "auto";
+        document.getElementById("BotonC").style.marginTop = "1.5rem";
+      }
+      //Activar boton (ocultar perfiles)
 
-        function ocultarperfiles() {
+      function ocultarperfiles() {
         // Cambiar a display: block (Foto-perfil-1 y Foto-perfil-2)
-        document.getElementById('Foto-perfil-1').style.display = 'none';
-        document.getElementById('Foto-perfil-2').style.display = 'none';
-        document.getElementById('ocultarF').style.display = 'block'; 
+        document.getElementById("Foto-perfil-1").style.display = "none";
+        document.getElementById("Foto-perfil-2").style.display = "none";
+        document.getElementById("ocultarF").style.display = "block";
 
         // Cambiar a display: inline-block (Botones N, E, S, O)
-        const botones = ['BotonN', 'BotonE', 'BotonS', 'BotonO', 'ocultarP'];
-        botones.forEach(id => {
-            document.getElementById(id).style.display = 'none';
+        const botones = ["BotonN", "BotonE", "BotonS", "BotonO", "ocultarP"];
+        botones.forEach((id) => {
+          document.getElementById(id).style.display = "none";
         });
-        document.getElementById('BotonPerfiles').style.display = 'block';
-        document.getElementById('BotonC').style.margin = '1.5rem';
-         document.getElementById('BotonPerfiles').style.margin = '1.5rem';
-        }
-
-        //Checkbox Textura
-        document.querySelectorAll('input[name="textura"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    document.querySelectorAll('input[name="textura"]').forEach(other => {
-                        if (other !== this) other.checked = false;
-                    });
-                }
-            });
-        });
-
-
-
-
-        //Checkbox Color
-
-        document.querySelectorAll('input[name="color"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    document.querySelectorAll('input[name="color"]').forEach(other => {
-                        if (other !== this) other.checked = false;
-                    });
-                }
-            });
-        });
-        // Checkbox consistencia
-        document.querySelectorAll('input[name="consistencia"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    document.querySelectorAll('input[name="consistencia"]').forEach(other => {
-                        if (other !== this) other.checked = false;
-                    });
-                }
-            });
-        });
-        // Checkbox granulometria
-        document.querySelectorAll('input[name="granulometria"]').forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            const checkedBoxes = document.querySelectorAll('input[name="granulometria"]:checked');
-            if (checkedBoxes.length > 2) {
-                checkedBoxes[0].checked = false; // Desmarca el más antiguo
-            }
-        });
-    });
-        // Checkbox organico
-        document.querySelectorAll('input[name="organico"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    document.querySelectorAll('input[name="organico"]').forEach(other => {
-                        if (other !== this) other.checked = false;
-                    });
-                }
-            });
+        document.getElementById("BotonPerfiles").style.display = "block";
+        document.getElementById("BotonC").style.margin = "1.5rem";
+        document.getElementById("BotonPerfiles").style.margin = "1.5rem";
+      }
+      //clear local storage
+      function limpiarCampos() {
+        inputs.forEach((input) => {
+          if (input.type === "text") {
+            input.value = "";
+          } else if (input.type === "checkbox") {
+            input.checked = false;
+          }
+          localStorage.removeItem(input.id);
+          staticData();
         });
 
-        //Cierre de nivel Foto
-        document.getElementById("Nivel").addEventListener("input", function() {
-            const valorInput = this.value.trim(); // Elimina espacios en blanco
-            const textoFinal = valorInput ? "Cierre de nivel " + valorInput : "Cierre de nivel";
-            document.getElementById("cierreNivelTexto").textContent = textoFinal;
-        });
+        alert(
+          "Todos los campos han sido limpiados y los checkboxes restablecidos."
+        );
+      }
 
+      //Cierre de nivel Foto
+      document.getElementById("Nivel").addEventListener("input", function () {
+        const valorInput = this.value.trim(); // Elimina espacios en blanco
+        const textoFinal = valorInput
+          ? "Cierre de nivel " + valorInput
+          : "Cierre de nivel";
+        document.getElementById("cierreNivelTexto").textContent = textoFinal;
+      });
 
-
-        //Botones Fotos
-        function mostrarImagenC(input) {
+      //Botones Fotos
+      function mostrarImagenC(input) {
         if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-            document.getElementById('imgcierre').src = e.target.result;
-            document.getElementById('imgcierre').style.display = 'block';
-            }
-            reader.readAsDataURL(input.files[0]);
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("imgcierre").src = e.target.result;
+            document.getElementById("imgcierre").style.display = "block";
+          };
+          reader.readAsDataURL(input.files[0]);
         }
-        }
-                function mostrarImagenN(input) {
+      }
+      function mostrarImagenN(input) {
         if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-            document.getElementById('imgPN').src = e.target.result;
-            document.getElementById('imgPN').style.display = 'block';
-            }
-            reader.readAsDataURL(input.files[0]);
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("imgPN").src = e.target.result;
+            document.getElementById("imgPN").style.display = "block";
+          };
+          reader.readAsDataURL(input.files[0]);
         }
-        }
-        function mostrarImagenE(input) {
+      }
+      function mostrarImagenE(input) {
         if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-            document.getElementById('imgPE').src = e.target.result;
-            document.getElementById('imgPE').style.display = 'block';
-            }
-            reader.readAsDataURL(input.files[0]);
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("imgPE").src = e.target.result;
+            document.getElementById("imgPE").style.display = "block";
+          };
+          reader.readAsDataURL(input.files[0]);
         }
-        }
-        function mostrarImagenS(input) {
+      }
+      function mostrarImagenS(input) {
         if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-            document.getElementById('imgPS').src = e.target.result;
-            document.getElementById('imgPS').style.display = 'block';
-            }
-            reader.readAsDataURL(input.files[0]);
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("imgPS").src = e.target.result;
+            document.getElementById("imgPS").style.display = "block";
+          };
+          reader.readAsDataURL(input.files[0]);
         }
-        }
-        function mostrarImagenO(input) {
+      }
+      function mostrarImagenO(input) {
         if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-            document.getElementById('imgPO').src = e.target.result;
-            document.getElementById('imgPO').style.display = 'block';
-            }
-            reader.readAsDataURL(input.files[0]);
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("imgPO").src = e.target.result;
+            document.getElementById("imgPO").style.display = "block";
+          };
+          reader.readAsDataURL(input.files[0]);
         }
+      }
+
+      // Función de impresión
+      function imprimirSinBoton() {
+        // IDs de los inputs a validar (text, select, etc.)
+        const ids = [
+          "Sitio",
+          "Capa",
+          "Pozo",
+          "Nivel",
+          "Responsable",
+          "Fecha",
+          "Region",
+          "Provincia",
+        ];
+        const inputsFaltantes = [];
+
+        // 1. Validar campos de texto/select
+        ids.forEach((id) => {
+          const input = document.getElementById(id);
+          if (!input || input.value.trim() === "") {
+            inputsFaltantes.push(id);
+          }
+        });
+
+        // 2. Validar checkboxes (cada grupo debe tener al menos 1 seleccionado)
+        const checkboxGroups = [
+          "textura",
+          "color",
+          "consistencia",
+          "granulometria",
+          "organico",
+          "inclusiones",
+        ];
+        const gruposFaltantes = [];
+
+        checkboxGroups.forEach((groupName) => {
+          const checkboxes = document.querySelectorAll(
+            `input[name="${groupName}"]:checked`
+          );
+          if (checkboxes.length === 0) {
+            gruposFaltantes.push(groupName); // Agregar grupo faltante
+          }
+        });
+
+        /*         // Si hay campos vacíos o grupos de checkboxes incompletos, mostrar alerta
+        if (inputsFaltantes.length > 0 || gruposFaltantes.length > 0) {
+          let mensajeError = "Faltan los siguientes datos:\n";
+
+          if (inputsFaltantes.length > 0) {
+            mensajeError += `- Campos: ${inputsFaltantes.join(", ")}\n`;
+          }
+
+          if (gruposFaltantes.length > 0) {
+            mensajeError += `- Debes seleccionar al menos 1 opción en: ${gruposFaltantes.join(
+              ", "
+            )}`;
+          }
+
+          alert(mensajeError);
+          return; // Detener la ejecución
+        } */
+
+        // Si todo está correcto, ejecutar el código de impresión
+        const boton = document.querySelector(".pdf-button");
+
+        // Eliminar encabezados
+        const printStyles = document.createElement("style");
+        printStyles.innerHTML = `
+                      @page { margin: 0 !important; size: auto; padding: 0;}
+                      @page :footer { display: none !important; }
+                      @page :header { display: none !important; }
+                  `;
+        document.head.appendChild(printStyles);
+
+        // Pequeña pausa para aplicar estilos
+        setTimeout(() => {
+          window.print();
+
+          // Limpiar y restaurar después de imprimir
+          setTimeout(() => {
+            boton.style.display = "block";
+            document.head.removeChild(printStyles);
+          }, 500);
+        }, 100);
+      }
+    </script>
+    <style>
+      /* Estilos para impresión  */
+
+      @page {
+        size: a4 portrait;
+      }
+      @media print {
+        body {
+          overflow: hidden;
+          margin: 0 !important;
+          padding: 0 !important;
+          border: 0 !important;
         }
 
-        
-        // Función de impresión 
-        function imprimirSinBoton() {
-            // IDs de los inputs a validar (text, select, etc.)
-            const ids = ['Sitio', 'Capa', 'Pozo', 'Nivel', 'Responsable', 'Fecha', 'Region', 'Provincia'];
-            const inputsFaltantes = [];
-
-            // 1. Validar campos de texto/select
-            ids.forEach(id => {
-                const input = document.getElementById(id);
-                if (!input || input.value.trim() === '') {
-                    inputsFaltantes.push(id);
-                }
-            });
-
-            // 2. Validar checkboxes (cada grupo debe tener al menos 1 seleccionado)
-            const checkboxGroups = ['textura', 'color', 'consistencia', 'granulometria', 'organico', 'inclusiones'];
-            const gruposFaltantes = [];
-
-            checkboxGroups.forEach(groupName => {
-                const checkboxes = document.querySelectorAll(`input[name="${groupName}"]:checked`);
-                if (checkboxes.length === 0) {
-                    gruposFaltantes.push(groupName); // Agregar grupo faltante
-                }
-            });
-
-            // Si hay campos vacíos o grupos de checkboxes incompletos, mostrar alerta
-            if (inputsFaltantes.length > 0 || gruposFaltantes.length > 0) {
-                let mensajeError = "Faltan los siguientes datos:\n";
-                
-                if (inputsFaltantes.length > 0) {
-                    mensajeError += `- Campos: ${inputsFaltantes.join(', ')}\n`;
-                }
-                
-                if (gruposFaltantes.length > 0) {
-                    mensajeError += `- Debes seleccionar al menos 1 opción en: ${gruposFaltantes.join(', ')}`;
-                }
-
-                alert(mensajeError);
-                return; // Detener la ejecución
-            }
-
-            // Si todo está correcto, ejecutar el código de impresión
-            const boton = document.querySelector('.pdf-button');
-            
-            // Eliminar encabezados
-            const printStyles = document.createElement('style');
-            printStyles.innerHTML = `
-                @page { margin: 0 !important; size: auto; padding: 0;}
-                @page :footer { display: none !important; }
-                @page :header { display: none !important; }
-            `;
-            document.head.appendChild(printStyles);
-            
-            // Pequeña pausa para aplicar estilos
-            setTimeout(() => {
-                window.print();
-                
-                // Limpiar y restaurar después de imprimir
-                setTimeout(() => {
-                    boton.style.display = 'block';
-                    document.head.removeChild(printStyles);
-                }, 500);
-            }, 100);
-        }           
-        </script>
-        <style>
-        /* Estilos para impresión  */
-
-        @page {
-            size: a4 portrait;
+        input[type="checkbox"]:checked::before {
+          content: "X";
         }
-        @media print {
-            body {
-                overflow: hidden;
-                margin: 0 !important;
-                padding: 0 !important;
-                border: 0 !important;
-            }
-            /*.form-container{
+
+        /*.form-container{
                 margin: 0!important;
                 padding-top: 5mm !important;
                 width: 216mm !important; 
@@ -1048,21 +1671,23 @@
                 page-break-before: always !important;
                 overflow: hidden;
             }*/
-            .other-input {
-                font-weight: bold;
-            }
-            /* Fuerza mostrar fondos blancos en inputs */
-            input, textarea, select {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-                background: white !important;
-                border: 0px #000000 !important;
-            }    
-            /* Oculta el botón en PDF */
-            .pdf-button {
-                display: none !important;
-            }
+        .other-input {
+          font-weight: bold;
         }
-        </style>
-</body>
+        /* Fuerza mostrar fondos blancos en inputs */
+        input,
+        textarea,
+        select {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          background: white !important;
+          border: 0px #000000 !important;
+        }
+        /* Oculta el botón en PDF */
+        .pdf-button {
+          display: none !important;
+        }
+      }
+    </style>
+  </body>
 </html>
