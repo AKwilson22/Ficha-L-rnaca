@@ -1429,7 +1429,7 @@
 
       inputs.forEach((input) => {
         if (input.type === "text") {
-          input.addEventListener("change", () => {
+          input.addEventListener("input", () => {
             localStorage[input.id] = input.value;
           });
         } else if (input.type === "checkbox") {
